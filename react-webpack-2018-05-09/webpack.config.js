@@ -3,6 +3,7 @@
  */
 var path = require('path');
 var webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     devtool: 'inline-source-map',
@@ -31,6 +32,7 @@ module.exports = {
     },
     mode: 'development',
     plugins: [
+        new CleanWebpackPlugin(['dist']),
         new webpack.HotModuleReplacementPlugin()
     ]
 }    
