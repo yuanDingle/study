@@ -30,6 +30,7 @@ module.exports = {
             }
         ]
     },
+    
     mode: 'development',
     plugins: [
         new CleanWebpackPlugin(['dist']),
