@@ -30,10 +30,10 @@ module.exports = {
             }
         ]
     },
-    
+
     mode: 'development',
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['build']),
         new webpack.HotModuleReplacementPlugin()
     ]
 }    
