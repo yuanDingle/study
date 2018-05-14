@@ -31,6 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/users', routers);
+app.use('/', require('connect-history-api-fallback')()); // Add
 
 //设置跨域
 app.all('*', function (req, res, next) {
@@ -52,5 +53,5 @@ app.get('/index', (request, response) => {
 
 // Serve the files on port 3000.
 app.listen(8181, function () {
-    console.log('Example app listening on port 3000!\n');
+    console.log('Example app listening on port 8181!\n');
 });

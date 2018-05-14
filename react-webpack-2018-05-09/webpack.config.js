@@ -27,13 +27,22 @@ module.exports = {
                     presets: ['es2015', 'react']
                 }
 
-            }
+            },
+            //加载css、less样式
+            {
+                test: /\.(css|less)$/,
+                loaders: ['style-loader', 'css-loader','less-loader']
+            },
         ]
     },
     
     mode: 'development',
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        //删除上次产生的文件
+        new CleanWebpackPlugin([
+            'build/*.hot-update.json',
+            'build/main.*.js',
+            'build/*.hot-update.js']),
         new webpack.HotModuleReplacementPlugin()
     ]
 }    

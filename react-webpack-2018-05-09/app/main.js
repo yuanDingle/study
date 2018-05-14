@@ -1,5 +1,5 @@
 let React = require('react');
 let ReactDOM = require('react-dom');
-import Frame from './test';
+import App from './app';
 
-ReactDOM.render(<div><Frame /></div>, document.getElementById('content'));
+ReactDOM.render(<div><App /></div>, document.getElementById('content'));
